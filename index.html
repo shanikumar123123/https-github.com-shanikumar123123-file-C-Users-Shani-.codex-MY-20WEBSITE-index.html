@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgb(185, 178, 178);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #output {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .title {
+            color: #2563eb;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Details</h1>
+
+        <form onsubmit="showData(event)">
+
+            <label>Student Name</label>
+            <input type="text" id="name" required>
+
+            <label>Roll Number</label>
+            <input type="text" id="roll" required>
+
+            <label>Father Name</label>
+            <input type="text" id="father" required>
+
+            <label>Mother Name</label>
+            <input type="text" id="mother" required>
+
+            <label>College Name</label>
+            <input type="text" id="college" required>
+
+            <label>Year</label>
+            <input type="text" id="year" required>
+
+            <label>Semester</label>
+            <input type="text" id="semester" required>
+
+            <label>City</label>
+            <input type="text" id="city" required>
+
+            <label>Subject</label>
+            <input type="text" id="subject" required>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <div id="output"></div>
+
+    </div>
+
+    <script>
+        function showData(event) {
+
+            event.preventDefault();
+
+            document.getElementById("output").innerHTML =
+                "<h2 class='title'>Student Details</h2>" +
+                "<b>Student Name:</b> " + document.getElementById("name").value + "<br>" +
+                "<b>Roll Number:</b> " + document.getElementById("roll").value + "<br>" +
+                "<b>Father Name:</b> " + document.getElementById("father").value + "<br>" +
+                "<b>Mother Name:</b> " + document.getElementById("mother").value + "<br>" +
+                "<b>College Name:</b> " + document.getElementById("college").value + "<br>" +
+                "<b>Year:</b> " + document.getElementById("year").value + "<br>" +
+                "<b>Semester:</b> " + document.getElementById("semester").value + "<br>" +
+                "<b>City:</b> " + document.getElementById("city").value + "<br>" +
+                "<b>Subject:</b> " + document.getElementById("subject").value;
+        }
+    </script>
+
+</body>
+
+</html>
